@@ -85,7 +85,7 @@ class Critter : MonoBehaviour
     }
 
     public void DefineSkills(int numSkills, Skill newSkill)
-        {
+    {
             System.Random selector = new System.Random();
            
             if (numSkills > 3)
@@ -112,7 +112,7 @@ class Critter : MonoBehaviour
             }
 
             
-        }
+    }
 
         public float AlterState(int state) //0-subida de ataque , 1 - subida de defensa , 2- disminucion velocidad
         {
