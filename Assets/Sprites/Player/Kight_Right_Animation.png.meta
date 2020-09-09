@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: 21ded1c84eafcae41912d5284afd23d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 259399534566628765
+    second: Right-Idle-1
+  - first:
+      213: -2277606243234816178
+    second: Right-Idle-2
+  - first:
+      213: -4118840026235502323
+    second: Right-Idle-3
+  - first:
+      213: 8170136153195633141
+    second: Right-Idle-4
+  - first:
+      213: 7710056144126204755
+    second: Right-Idle-5
+  - first:
+      213: -1157138012623906883
+    second: Right-Idle-6
+  - first:
+      213: 411218004898203972
+    second: Right-Idle-7
+  - first:
+      213: -3716901132557143845
+    second: Right-Run-1
+  - first:
+      213: -5667958413266606410
+    second: Right-Run-2
+  - first:
+      213: 2144487959885411455
+    second: Right-Run-3
+  - first:
+      213: -2518058189503311955
+    second: Right-Run-4
+  - first:
+      213: -7025164935471438428
+    second: Right-Run-5
+  - first:
+      213: -1187760612455661101
+    second: Right-Run-6
+  - first:
+      213: -2065587713335890973
+    second: Right-Run-7
+  - first:
+      213: -287406138946175065
+    second: Right-Run-8
+  - first:
+      213: 9020626098124847227
+    second: Right-Attack-1
+  - first:
+      213: -4617032646113665149
+    second: Right-Attack-2
+  - first:
+      213: 5633132214617415300
+    second: Right-Attack-3
+  - first:
+      213: -4646677874744707110
+    second: Right-Attack-4
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Right-Idle-1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51428574, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ddeb89082999300800000000000000
+      internalID: 259399534566628765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51428574, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fd6c560315460e0800000000000000
+      internalID: -2277606243234816178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 36
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01829591d0f6d6c0800000000000000
+      internalID: -4118840026235502323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 36
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f95dc94b87226170800000000000000
+      internalID: 8170136153195633141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-5
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 0
+        width: 36
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bd5f4a63f9ffa60800000000000000
+      internalID: 7710056144126204755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-6
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51428574, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db75379bb1501ffe0800000000000000
+      internalID: -1157138012623906883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Idle-7
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51428574, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449c333c890f4b500800000000000000
+      internalID: 411218004898203972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 0
+        width: 39
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4871795, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd03fa8ec1aea6cc0800000000000000
+      internalID: -3716901132557143845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 39
+        height: 64
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6ae8f6add5751b0800000000000000
+      internalID: -5667958413266606410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-3
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 41
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7472120070c2cd10800000000000000
+      internalID: 2144487959885411455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-4
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 41
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf44eafa6f0e0dd0800000000000000
+      internalID: -2518058189503311955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-5
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 41
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5121951, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5e1bc46b9918e90800000000000000
+      internalID: -7025164935471438428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-6
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 0
+        width: 39
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4871795, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d14168140a348fe0800000000000000
+      internalID: -1187760612455661101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-7
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 0
+        width: 37
+        height: 64
+      alignment: 9
+      pivot: {x: 0.45945945, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebe33e2bee8553e0800000000000000
+      internalID: -2065587713335890973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Run-8
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 0
+        width: 39
+        height: 64
+      alignment: 9
+      pivot: {x: 0.51282054, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afb8dda3ade20cf0800000000000000
+      internalID: -287406138946175065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Attack-1
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 0
+        width: 36
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3611111, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78795694a3bf2d70800000000000000
+      internalID: 9020626098124847227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Attack-2
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 56
+        height: 64
+      alignment: 9
+      pivot: {x: 0.42857146, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f530c35410defb0800000000000000
+      internalID: -4617032646113665149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Attack-3
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 0
+        width: 47
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5106383, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e941157e7ec2e40800000000000000
+      internalID: 5633132214617415300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Right-Attack-4
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 38
+        height: 64
+      alignment: 9
+      pivot: {x: 0.39473686, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7bc22971fa38fb0800000000000000
+      internalID: -4646677874744707110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

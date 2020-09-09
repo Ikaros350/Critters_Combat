@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TallerPractico1_CritterCombat
-{
     class AttackSkill:Skill
     {
         Affinity affinityArray;
@@ -37,4 +35,4 @@ namespace TallerPractico1_CritterCombat
       
 
     }
-}
+

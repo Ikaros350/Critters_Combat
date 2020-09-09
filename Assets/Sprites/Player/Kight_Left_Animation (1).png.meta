@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: cfc536d9f211eca4e85b374dde179f19
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5714347413142659896
+    second: Left-Attack-4
+  - first:
+      213: 5772897399494685961
+    second: Left-Attack-3
+  - first:
+      213: 4315487874386354655
+    second: Left-Attack-2
+  - first:
+      213: -1408434047701713474
+    second: Left-Attack-1
+  - first:
+      213: 8824206022291103872
+    second: Left-Run-8
+  - first:
+      213: -5923819398227650062
+    second: Left-Run-7
+  - first:
+      213: -1590238217807148222
+    second: Left-Run-6
+  - first:
+      213: -1585097148942892318
+    second: Left-Run-5
+  - first:
+      213: -2951451782561767843
+    second: Left-Run-4
+  - first:
+      213: 5086965418476095465
+    second: Left-Run-3
+  - first:
+      213: 8545448744337538593
+    second: Left-Run-2
+  - first:
+      213: 2934201677400913033
+    second: Left-Run-1
+  - first:
+      213: -6874479653621378505
+    second: Left-Idle-7
+  - first:
+      213: 921083906601045833
+    second: Left-Idle-6
+  - first:
+      213: 5413002648172605633
+    second: Left-Idle-5
+  - first:
+      213: 3828981170783648288
+    second: Left-Idle-4
+  - first:
+      213: 6527748603836479186
+    second: Left-Idle-3
+  - first:
+      213: -2505330251370358148
+    second: Left-Idle-2
+  - first:
+      213: 7007352378984826040
+    second: Left-Idle-1
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Left-Attack-4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 38
+        height: 63
+      alignment: 9
+      pivot: {x: 0.6052632, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc957cbd4f82b0b0800000000000000
+      internalID: -5714347413142659896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Attack-3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 47
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4893617, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90538a549937d1050800000000000000
+      internalID: 5772897399494685961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Attack-2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1ed497b51b3eb30800000000000000
+      internalID: 4315487874386354655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Attack-1
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 36
+        height: 63
+      alignment: 9
+      pivot: {x: 0.6388889, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd7c2122bc347ce0800000000000000
+      internalID: -1408434047701713474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-8
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 0
+        width: 39
+        height: 63
+      alignment: 9
+      pivot: {x: 0.51282054, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0802687ef90e57a70800000000000000
+      internalID: 8824206022291103872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-7
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 0
+        width: 37
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5405405, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9921f94ad5acda0800000000000000
+      internalID: -5923819398227650062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-6
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 0
+        width: 39
+        height: 63
+      alignment: 9
+      pivot: {x: 0.51282054, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bca5f24c65ee9e0800000000000000
+      internalID: -1590238217807148222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 41
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e246ce8a8a900ae0800000000000000
+      internalID: -1585097148942892318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 41
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e56b0cd365a07d0800000000000000
+      internalID: -2951451782561767843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-3
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 0
+        width: 41
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7c6f0a818889640800000000000000
+      internalID: 5086965418476095465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-2
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 0
+        width: 39
+        height: 63
+      alignment: 9
+      pivot: {x: 0.51282054, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12efb847b58879670800000000000000
+      internalID: 8545448744337538593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Run-1
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 0
+        width: 39
+        height: 63
+      alignment: 9
+      pivot: {x: 0.51282054, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98436d821e068b820800000000000000
+      internalID: 2934201677400913033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-7
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 35
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4857143, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7325f367d21f890a0800000000000000
+      internalID: -6874479653621378505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-6
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 0
+        width: 35
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4857143, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fc845dee858cc00800000000000000
+      internalID: 921083906601045833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 36
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0b39caa39de1b40800000000000000
+      internalID: 5413002648172605633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-4
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 0
+        width: 36
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02af7388616432530800000000000000
+      internalID: 3828981170783648288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-3
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 0
+        width: 36
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6b9ba05c8379a50800000000000000
+      internalID: 6527748603836479186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-2
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 35
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4857143, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a970209674b3dd0800000000000000
+      internalID: -2505330251370358148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left-Idle-1
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 35
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4857143, y: 0.50793654}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b40165bcdd1f3160800000000000000
+      internalID: 7007352378984826040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

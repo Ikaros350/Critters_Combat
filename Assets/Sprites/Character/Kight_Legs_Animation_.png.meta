@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: a8e9959e76a179744b9d4e1194bbd4f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7742291601000426582
+    second: Kight_Legs_Animation__0
+  - first:
+      213: 3250584469212836598
+    second: Kight_Legs_Animation__1
+  - first:
+      213: -1481015507369901565
+    second: Kight_Legs_Animation__2
+  - first:
+      213: -5809568599984150889
+    second: Kight_Legs_Animation__3
+  - first:
+      213: -3810032137720713872
+    second: Kight_Legs_Animation__4
+  - first:
+      213: -7459451940971574293
+    second: Kight_Legs_Animation__5
+  - first:
+      213: -4878552384182489922
+    second: Kight_Legs_Animation__6
+  - first:
+      213: -522435950355734253
+    second: Kight_Legs_Animation__7
+  - first:
+      213: -6059122937942951871
+    second: Kight_Legs_Animation__8
+  - first:
+      213: 7583477599889854685
+    second: Kight_Legs_Animation__9
+  - first:
+      213: 4974885119519944832
+    second: Kight_Legs_Animation__10
+  - first:
+      213: -4569872260685852332
+    second: Kight_Legs_Animation__11
+  - first:
+      213: -362678381381672530
+    second: Kight_Legs_Animation__12
+  - first:
+      213: -3153037687713419707
+    second: Kight_Legs_Animation__13
+  - first:
+      213: -3558114997489216357
+    second: Kight_Legs_Animation__14
+  - first:
+      213: 7531002431918581287
+    second: Kight_Legs_Animation__15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 3
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa311ee2fcadd8490800000000000000
+      internalID: -7742291601000426582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 3
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f235d73a556c1d20800000000000000
+      internalID: 3250584469212836598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 3
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3024f582e30627be0800000000000000
+      internalID: -1481015507369901565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 3
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7966ea38324406fa0800000000000000
+      internalID: -5809568599984150889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__4
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 3
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07da55805fb002bc0800000000000000
+      internalID: -3810032137720713872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__5
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 3
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb8a474bf3ba7890800000000000000
+      internalID: -7459451940971574293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__6
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 3
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebceaaa4476eb4cb0800000000000000
+      internalID: -4878552384182489922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__7
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 3
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3112729654fefb8f0800000000000000
+      internalID: -522435950355734253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__8
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 3
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1483d716acba9eba0800000000000000
+      internalID: -6059122937942951871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__9
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 3
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd01197b2bced3960800000000000000
+      internalID: 7583477599889854685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__10
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080fc5b78a75a0540800000000000000
+      internalID: 4974885119519944832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__11
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 3
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45198e0246d8490c0800000000000000
+      internalID: -4569872260685852332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__12
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 3
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea128060fe187faf0800000000000000
+      internalID: -362678381381672530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__13
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 3
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e2c64bde82e34d0800000000000000
+      internalID: -3153037687713419707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__14
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 3
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b945aa0f2490f9ec0800000000000000
+      internalID: -3558114997489216357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kight_Legs_Animation__15
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 3
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7262c159fce738860800000000000000
+      internalID: 7531002431918581287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

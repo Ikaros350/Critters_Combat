@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TallerPractico1_CritterCombat
-{
+
     class Affinity
     {
         private string[] affinities;
-
-           
 
         public Affinity()
         {
@@ -73,4 +70,4 @@ namespace TallerPractico1_CritterCombat
             return affinityMultiplier;
         } //Tabla de multiplicadores de las afinidades
     }
-}
+

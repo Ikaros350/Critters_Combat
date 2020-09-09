@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-namespace TallerPractico1_CritterCombat
-{
+
   public  abstract class Skill
     {
         //ataques
@@ -19,4 +19,4 @@ namespace TallerPractico1_CritterCombat
             Power = power;
         }
     }
-}
+

@@ -1,12 +1,10 @@
-﻿using Microsoft.Win32;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TallerPractico1_CritterCombat
-{
     class SupportSkill:Skill
     {
         //tecnicas de support
@@ -23,7 +21,6 @@ namespace TallerPractico1_CritterCombat
                 Name = "SpdDwn";
           else 
                 Name = "AtkUp";
-
         }
     }
-}
+

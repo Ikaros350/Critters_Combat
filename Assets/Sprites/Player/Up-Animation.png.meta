@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: abff85d8dde5e9b4e8f812f4bec9fc07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3363114895084563135
+    second: Up-Run-1
+  - first:
+      213: 5165580839136603641
+    second: Up-Run-2
+  - first:
+      213: 715617681882376701
+    second: Up-Run-3
+  - first:
+      213: 8489385486877870379
+    second: Up-Run-4
+  - first:
+      213: 429627484026615972
+    second: Up-Run-5
+  - first:
+      213: -7682394124315939217
+    second: Up-Run-6
+  - first:
+      213: -559347401140120406
+    second: Up-Run-7
+  - first:
+      213: 4528925797012695925
+    second: Up-Run-8
+  - first:
+      213: -7049332606199383153
+    second: Up-Attack-1
+  - first:
+      213: -400997817730031093
+    second: Up-Attack-2
+  - first:
+      213: 735218921568432513
+    second: Up-Attack-3
+  - first:
+      213: 525510395757860168
+    second: Up-Attack-4
+  - first:
+      213: -7985105801435858413
+    second: Up-Dash-1
+  - first:
+      213: 2623056530151855374
+    second: Up-Dash-2
+  - first:
+      213: -6969670005798250858
+    second: Up-Dash-3
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Up-Run-1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 34
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba2754bd2f2cae20800000000000000
+      internalID: 3363114895084563135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 34
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 2, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd2d4f9764dfa740800000000000000
+      internalID: 5165580839136603641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.54285717, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9669b7d726ee900800000000000000
+      internalID: 715617681882376701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 33
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.5}
+      border: {x: 0, y: 5, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2946b22f1b50d570800000000000000
+      internalID: 8489385486877870379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-5
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 0
+        width: 34
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8b623abe756f500800000000000000
+      internalID: 429627484026615972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 33
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.5}
+      border: {x: 0, y: 2, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ea99b3f37a26590800000000000000
+      internalID: -7682394124315939217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 0
+        width: 33
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa45101908ccc38f0800000000000000
+      internalID: -559347401140120406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Run-8
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 33
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.5}
+      border: {x: 0, y: 5, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b6b01640af9de30800000000000000
+      internalID: 4528925797012695925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Attack-1
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 35
+        height: 64
+      alignment: 9
+      pivot: {x: 0.45714286, y: 0.5}
+      border: {x: 0, y: 4, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b38e7f75dbb2e90800000000000000
+      internalID: -7049332606199383153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Attack-2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.41509435, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02ae7efb9e5f6af0800000000000000
+      internalID: -400997817730031093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Attack-3
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 45
+        height: 64
+      alignment: 9
+      pivot: {x: 0.31111112, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1817b3cb6b5043a00800000000000000
+      internalID: 735218921568432513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Attack-4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 0
+        width: 37
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3783784, y: 0.5}
+      border: {x: 0, y: 3, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8451ce0bbecfa4700800000000000000
+      internalID: 525510395757860168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Dash-1
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 0
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a318b94943f2190800000000000000
+      internalID: -7985105801435858413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Dash-2
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 0
+        width: 37
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5675676, y: 0.5}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0558714408f66420800000000000000
+      internalID: 2623056530151855374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Up-Dash-3
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 37
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5135135, y: 0.5}
+      border: {x: 0, y: 2, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69653be7e02c64f90800000000000000
+      internalID: -6969670005798250858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

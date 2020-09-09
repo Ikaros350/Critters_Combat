@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: ee1db1ec68ac4044098626b593b74bee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2837746962917736459
+    second: Hongui_Explosion_0
+  - first:
+      213: -3145975120304015185
+    second: Hongui_Explosion_1
+  - first:
+      213: -5806196785834957808
+    second: Hongui_Explosion_2
+  - first:
+      213: 3808786280353022342
+    second: Hongui_Explosion_3
+  - first:
+      213: 5538208821124274611
+    second: Hongui_Explosion_4
+  - first:
+      213: -4401431850602991095
+    second: Hongui_Explosion_5
+  - first:
+      213: 2605133129927800420
+    second: Hongui_Explosion_6
+  - first:
+      213: 8528994620253654349
+    second: Hongui_Explosion_7
+  - first:
+      213: 8428925201832153219
+    second: Hongui_Explosion_8
+  - first:
+      213: -8342207660782776240
+    second: Hongui_Explosion_9
+  - first:
+      213: -4347748736334125864
+    second: Hongui_Explosion_10
+  - first:
+      213: 6927120678242685233
+    second: Hongui_Explosion_11
+  - first:
+      213: -3683602205986417294
+    second: Hongui_Explosion_12
+  - first:
+      213: -917535233923315883
+    second: Hongui_Explosion_13
+  - first:
+      213: -6322050254247646972
+    second: Hongui_Explosion_14
+  - first:
+      213: -973598402861205001
+    second: Hongui_Explosion_15
+  - first:
+      213: -873592899151237199
+    second: Hongui_Explosion_16
+  - first:
+      213: 1026755451383827598
+    second: Hongui_Explosion_17
+  - first:
+      213: -3961863565745326424
+    second: Hongui_Explosion_18
+  - first:
+      213: 816393721427853545
+    second: Hongui_Explosion_19
+  - first:
+      213: 2338463753121445215
+    second: Hongui_Explosion_20
+  - first:
+      213: -7884248267287986809
+    second: Hongui_Explosion_21
+  - first:
+      213: 7843268183946953000
+    second: Hongui_Explosion_22
+  - first:
+      213: 5378487354136515676
+    second: Hongui_Explosion_23
+  - first:
+      213: 553509584446865781
+    second: Hongui_Explosion_24
+  - first:
+      213: 8378328325554878047
+    second: Hongui_Explosion_25
+  - first:
+      213: -3907493691476085443
+    second: Hongui_Explosion_26
+  - first:
+      213: 7622060956807315864
+    second: Hongui_Explosion_27
+  - first:
+      213: -8290244605551545677
+    second: Hongui_Explosion_28
+  - first:
+      213: -3879267520911123222
+    second: Hongui_Explosion_29
+  - first:
+      213: -3241305085852191738
+    second: Hongui_Explosion_30
+  - first:
+      213: -6182244928176467770
+    second: Hongui_Explosion_31
+  - first:
+      213: 1635605407230316066
+    second: Hongui_Explosion_32
+  - first:
+      213: -209631346101008940
+    second: Hongui_Explosion_33
+  - first:
+      213: 2465606377763977442
+    second: Hongui_Explosion_34
+  - first:
+      213: 9133587318922028551
+    second: Hongui_Explosion_35
+  - first:
+      213: -5037643136048285198
+    second: Hongui_Explosion_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hongui_Explosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00c727e3d3b16720800000000000000
+      internalID: 2837746962917736459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8ff02db404754d0800000000000000
+      internalID: -3145975120304015185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014ea4c29ce3c6fa0800000000000000
+      internalID: -5806196785834957808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681c2d131f68bd430800000000000000
+      internalID: 3808786280353022342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b91c03849babdc40800000000000000
+      internalID: 5538208821124274611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902f7b93d09fae2c0800000000000000
+      internalID: -4401431850602991095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_6
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466b2f177ca472420800000000000000
+      internalID: 2605133129927800420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_7
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4dcf672b631d5670800000000000000
+      internalID: 8528994620253654349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hongui_Explosion_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3801b8d00de89f470800000000000000
+      internalID: 8428925201832153219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
