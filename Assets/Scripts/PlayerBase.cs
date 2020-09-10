@@ -41,9 +41,16 @@ public class PlayerBase : MonoBehaviour
     }
     public void LoseCritter(Critter critter)
     {
-        Critters[0].gameObject.SetActive(false);
-        Critters.Remove(critter);
-        
+        if (Critters.Count != 0)
+        {
+            
+            Critters[0].gameObject.SetActive(false);
+            Critters.Remove(critter);
+            Debug.Log(Critters.Count);
+            
+            if(Critters.Count != 0)
+                Critters[0].gameObject.SetActive(true); 
+        }
     }
     public void AddCritters(Critter critter)
     {

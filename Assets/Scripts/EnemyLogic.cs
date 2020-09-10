@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyLogic : PlayerBase
 {
-    bool myTurn;
+    
     int state;
 
     protected override void Awake()
@@ -14,32 +14,54 @@ public class EnemyLogic : PlayerBase
         EquipCritters(2);
 
     }
-    public bool MyTurn { get => myTurn; private set => myTurn = value; }
+    
  
-    void Update()
+ 
+    public Skill MadeAction()
     {
-        if(myTurn)
+        state = selector.Next(1, 4);
+
+        if (Critters[0].Moveset.Count == 3)
         {
-            state = selector.Next(1, 4);
+           
             if (state == 1)
             {
-                
-                myTurn = false;
+                return Critters[0].Moveset[0];
+
             }
             if (state == 2)
             {
-                
-                myTurn = false;
+                return Critters[0].Moveset[1];
+
             }
             if (state == 3)
             {
-                
-                myTurn = false;
+                return Critters[0].Moveset[2];
+
             }
+
+        }
+       else if (Critters[0].Moveset.Count == 2)
+        {
+
+            if (state == 1)
+            {
+                return Critters[0].Moveset[0];
+
+            }
+            if (state == 2)
+            {
+                return Critters[0].Moveset[1];
+
+            }
+
         }
         else
         {
-
+            return Critters[0].Moveset[0];
         }
+
+        return Critters[0].Moveset[0];
+       
     }
 }
