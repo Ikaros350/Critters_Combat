@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    class SupportSkill:Skill
+    public class SupportSkill:Skill
     {
         //tecnicas de support
 
