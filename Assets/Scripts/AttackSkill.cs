@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    class AttackSkill:Skill
+    public class AttackSkill:Skill
     {
         Affinity affinityArray;
         string[] newAffinities;

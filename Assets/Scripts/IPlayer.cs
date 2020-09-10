@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IPlayer 
 {
-    public void EquipCritters(int numCritters);
+   void EquipCritters(int numCritters);
 }

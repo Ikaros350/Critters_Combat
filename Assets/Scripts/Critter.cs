@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class Critter : MonoBehaviour
+
+public class Critter : MonoBehaviour, IPool
 {
-        //criaturas
-        [SerializeField] Affinity affinityArray = new Affinity();
+    //criaturas
+    [SerializeField] Vector3 initial;
+    System.Random selector;
+     [SerializeField] Affinity affinityArray = new Affinity();
         [SerializeField] float hp;
         [SerializeField] private float baseAttack, baseDefense, baseSpeed,
             currentAtq, currentDef, currentSpd;
@@ -25,9 +28,10 @@ class Critter : MonoBehaviour
         public string Affinity { get => affinity; private set => affinity = value; }
         public List<Skill> Moveset { get => moveSet; private set => moveSet = value; }
 
-        public void Awake()
+        public void Start()
         {
-            AwakeCritter();
+        
+        AwakeCritter();
         }
         public void DefineCritter(string name, int baseAttack,int baseDefense,int baseSpeed,int affinitieIndex, float hp)
         {
@@ -56,12 +60,12 @@ class Critter : MonoBehaviour
         else
             Affinity = newAffinities[affinitieIndex];
             
-
         }
     void AwakeCritter()
     {
+        selector = new System.Random(DateTimeOffset.Now.Millisecond);
         Moveset = new List<Skill>();
-        System.Random selector = new System.Random();
+        
         DefineCritter("Wun".ToString() + "-kun", selector.Next(10, 101), selector.Next(10, 101),
                                                     selector.Next(10, 51), selector.Next(0, 8), selector.Next(0, 501));
         int numSkills = selector.Next(1, 4);
@@ -86,7 +90,7 @@ class Critter : MonoBehaviour
 
     public void DefineSkills(int numSkills, Skill newSkill)
     {
-            System.Random selector = new System.Random();
+            selector = new System.Random(DateTimeOffset.Now.Millisecond);
            
             if (numSkills > 3)
                 numSkills = 3;
@@ -172,5 +176,16 @@ class Critter : MonoBehaviour
 
             Hp = Hp - DamageValue;
         }
+    public void Instantiate() // momento en que se instancia en la escena
+    {
+        initial = transform.position;
+    }
+    public void Begin(Vector3 position) // se llama en el momento moverse
+    {
+        transform.position = position; // recibe la posicion voy a aparecer
+        gameObject.transform.parent = null;
+        
+    }
+
 }
 

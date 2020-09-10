@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    class Affinity
+    public class Affinity
     {
         private string[] affinities;
 

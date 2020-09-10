@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-  public  abstract class Skill
+  public abstract class Skill
     {
         //ataques
         //atributos-------------
