@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class UIManager : Obsever
 {
-    [SerializeField] Button button1, button2, button3;
-    [SerializeField] Text playerLife, enemyLife, affinityPlayer, affinityEnemy,notification;
+    [SerializeField] Button[] buttons;
+    [SerializeField] Text playerCritters, enemyCritters, affinityPlayer, affinityEnemy,notification;
     [SerializeField] GameObject lockPanel;
-    private void Start()
-    {
-        
-    }
+    
+    private int countEnemy;
+    private int countPlayer;
     public void lockTurn()
     {
         lockPanel.SetActive(true);
@@ -20,19 +19,63 @@ public class UIManager : Obsever
     {
         lockPanel.SetActive(false);
     }
+    private void Start()
+    {
 
+        UpdateButtons();
+        countEnemy = Referee.instance.Enemy.Critters.Count;
+        countPlayer = Referee.instance.Player.Critters.Count;
+        enemyCritters.text = countEnemy.ToString();
+        playerCritters.text = countPlayer.ToString();
+    }
+    private void UpdateButtons()
+    {
+        for (int i = 0; i < Referee.instance.CurrentPlayerC.Moveset.Count; i++)
+        {
+            Debug.Log("Los botones cambiaran");
+            buttons[i].interactable = true;
+            buttons[i].GetComponentInChildren<Text>().text = Referee.instance.CurrentPlayerC.Moveset[i].Name;
+        }
+    }
+    private void DowndateButtons()
+    {
+        for (int i = 0; i < Referee.instance.CurrentPlayerC.Moveset.Count; i++)
+        {
+            Debug.Log("Los se borarran");
+            buttons[i].interactable = false;
+            buttons[i].GetComponentInChildren<Text>().text = "";
+        }
+    }
     public override void Notify()
     {
-        throw new System.NotImplementedException();
+        if(Referee.instance.CurrentEnemyC.Hp <= 0) 
+        {
+            countEnemy -= 1;
+        } 
+        if(Referee.instance.CurrentPlayerC.Hp <= 0)
+        {
+            countPlayer -= 1;
+            DowndateButtons();
+            UpdateButtons();
+        } 
+        UpdateCountCritters();
+    }
+    private void UpdateCountCritters()
+    {
+       if(enemyCritters != null)
+        {
+            enemyCritters.text = countEnemy.ToString();
+            playerCritters.text = countPlayer.ToString();
+        }
     }
 
     public override void Register(Referee referee)
     {
-        throw new System.NotImplementedException();
+        Referee.wonPLayer += Notify;
     }
 
     public override void UnRegister(Referee referee)
     {
-        throw new System.NotImplementedException();
+        Referee.wonPLayer -= Notify;
     }
 }

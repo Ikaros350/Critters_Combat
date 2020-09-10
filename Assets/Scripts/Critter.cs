@@ -100,20 +100,20 @@ public class Critter : MonoBehaviour, IPool
             if (Moveset.Count == 0 && newSkill is AttackSkill)
             {
            
-            Moveset.Add(newSkill);
+                Moveset.Add(newSkill);
             }
             else if(Moveset.Count != 0 && Moveset.Count < numSkills)
             {
             
-            Moveset.Add(newSkill);
+                Moveset.Add(newSkill);
             }
-            else if(Moveset.Count == 0 && newSkill is SupportSkill)
+            else 
             {
-            AttackSkill remplaceSkill = new AttackSkill("basicPunch", selector.Next(1, 11), selector.Next(0, 7));
+                AttackSkill remplaceSkill = new AttackSkill("basicPunch", selector.Next(1, 11), selector.Next(0, 7));
             
-            Moveset.Add(remplaceSkill);
+                Moveset.Add(remplaceSkill);
             }
-
+            
             
     }
 

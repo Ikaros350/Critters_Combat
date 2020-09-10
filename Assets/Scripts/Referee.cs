@@ -7,15 +7,29 @@ public class Referee : MonoBehaviour
     public static Referee instance;
 
     [SerializeField]private EnemyLogic enemy;
-
+    
     [SerializeField]private Player player;
     private bool turnStart;
     [SerializeField]private Critter currentPlayerC, currentEnemyC;
+
     Affinity affinityTable = new Affinity();
 
+    [SerializeField] int CRITTERS_ENEMY_COUNT;
+
+    public delegate void WonPlayer();
+
+    public static event WonPlayer wonPLayer;
     public static Referee Instance { get => instance; }
+    public EnemyLogic Enemy { get => enemy;}
+    public Player Player { get => player;}
+    public Critter CurrentPlayerC { get => currentPlayerC;}
+    public Critter CurrentEnemyC { get => currentEnemyC; }
 
+    [SerializeField]private Obsever[] observers;
 
+    private int currentCrittersCap;
+
+    private bool hasResgisteredObservers;
     private void Awake()
     {
         turnStart = true;
@@ -26,16 +40,47 @@ public class Referee : MonoBehaviour
 
         instance = this;
         player = FindObjectOfType<Player>();
+        
         //player = GetComponent<Player>();
 
         enemy = FindObjectOfType<EnemyLogic>();
+        
         //enemy = GetComponent<EnemyLogic>();
     }
     void Start()
     {
-
-
+        CRITTERS_ENEMY_COUNT = enemy.Critters.Count;
+        
+        RegisterObservers();
+        if (hasResgisteredObservers)
+        {
+            currentCrittersCap =0;
+            //NotifyObservers();
+        }
         ChangeCritter();
+    }
+    private void RegisterObservers()
+    {
+        foreach(Obsever observer in observers)
+        {
+            observer.Register(this);
+        }
+        hasResgisteredObservers = true;
+    }
+    private void UnregisterObservers()
+    {
+        hasResgisteredObservers = false;
+        foreach(Obsever observer in observers)
+        {
+            observer.UnRegister(this);
+        }
+    }
+    private void NotifyObservers()
+    {
+        if(wonPLayer != null)
+        {
+            wonPLayer();
+        }
     }
     public void ChangeCritter()
     {
@@ -45,8 +90,8 @@ public class Referee : MonoBehaviour
             currentEnemyC = enemy.Critters[0];
 
 
-            Debug.Log("criter del jugado canntidad de skills: " + currentPlayerC.Moveset.Count);
-            Debug.Log("criter del enemigo canntidad de skills: " + currentEnemyC.Moveset.Count);
+            //Debug.Log("criter del jugado canntidad de skills: " + currentPlayerC.Moveset.Count);
+            //Debug.Log("criter del enemigo canntidad de skills: " + currentEnemyC.Moveset.Count);
         }
     }
 
@@ -72,8 +117,8 @@ public class Referee : MonoBehaviour
                 PlayerTurn(skill);
                 timeCounter += 1f * Time.deltaTime;
 
-               
-                 EnemyTurn();
+               if(currentEnemyC.Hp>0)
+                EnemyTurn();
                
                 turnStart = false;
 
@@ -88,8 +133,8 @@ public class Referee : MonoBehaviour
                 EnemyTurn();
                 timeCounter += 1f * Time.deltaTime;
 
-                
-                PlayerTurn(skill);
+                if (currentPlayerC.Hp > 0)
+                    PlayerTurn(skill);
 
                 turnStart = false;
                
@@ -108,8 +153,8 @@ public class Referee : MonoBehaviour
                     EnemyTurn();
                     timeCounter += 1f * Time.deltaTime;
 
-                    
-                    PlayerTurn(skill);
+                    if (currentPlayerC.Hp > 0)
+                        PlayerTurn(skill);
 
                     turnStart = false; 
                 }
@@ -119,15 +164,14 @@ public class Referee : MonoBehaviour
                     PlayerTurn(skill);
                     timeCounter += 1f * Time.deltaTime;
 
-                    
-                    EnemyTurn();
+                    if (currentEnemyC.Hp > 0)
+                        EnemyTurn();
 
                     turnStart = false; 
                 }
             }
         }
 
-        Debug.Log(timeCounter);
     }
     void ValWin()
     {
@@ -137,8 +181,12 @@ public class Referee : MonoBehaviour
             if (currentPlayerC.Hp <= 0)
             {
                 enemy.AddCritters(currentPlayerC);
-                player.LoseCritter(currentPlayerC);
-
+                player.LoseCritter(currentPlayerC); 
+                
+                if (hasResgisteredObservers)
+                {
+                    NotifyObservers();
+                }
                 ChangeCritter();
             }
 
@@ -146,11 +194,13 @@ public class Referee : MonoBehaviour
             {
                 player.AddCritters(currentEnemyC);
                 enemy.LoseCritter(currentEnemyC);
+                if (hasResgisteredObservers)
+                {
+                    NotifyObservers();
+                }
                 ChangeCritter();
             }
         }
-     
-
 
     }
     void PlayerTurn(int skill)
@@ -159,6 +209,7 @@ public class Referee : MonoBehaviour
         if (currentPlayerC.Moveset[skill] is AttackSkill)
         {
             AttackSkill placeholderSkill = currentPlayerC.Moveset[skill] as AttackSkill;
+            Debug.Log("jUGADOR affinity skill" + placeholderSkill.MyAffinity);
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentEnemyC.Affinity);
             currentEnemyC.OnHit(currentPlayerC.CurrentAtq, placeholderSkill.Power, multipler);
             ValWin();
@@ -166,6 +217,7 @@ public class Referee : MonoBehaviour
         else if (currentPlayerC.Moveset[skill] is SupportSkill)
         {
             SupportSkill placeholderSkill = currentPlayerC.Moveset[skill] as SupportSkill;
+            Debug.Log("Jugador supp skill" + placeholderSkill.Name);
             switch (placeholderSkill.Name)
             {
                 case "AtkUp":
@@ -186,6 +238,7 @@ public class Referee : MonoBehaviour
         if (enemy.MadeAction() is AttackSkill)
         {
             AttackSkill placeholderSkill = enemy.MadeAction() as AttackSkill;
+            Debug.Log("Enemy affinity skill "+placeholderSkill.MyAffinity);
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
             currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
             ValWin();
@@ -193,6 +246,7 @@ public class Referee : MonoBehaviour
         else if (enemy.MadeAction() is SupportSkill)
         {
             SupportSkill placeholderSkill = enemy.MadeAction() as SupportSkill;
+            Debug.Log("Enemy supp skill" + placeholderSkill.Name);
             switch (placeholderSkill.Name)
             {
                 case "AtkUp":
