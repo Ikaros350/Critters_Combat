@@ -6,7 +6,7 @@ public abstract class Obsever : MonoBehaviour
 {
     public abstract void Notify();
 
-    public abstract void Register(Player player);
+    public abstract void Register(Referee referee);
 
-    public abstract void UnRegister(Player player);
+    public abstract void UnRegister(Referee referee);
 }

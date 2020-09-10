@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 770954606057331587}
   - component: {fileID: 7335660810252395482}
   m_Layer: 0
-  m_Name: ocotodali_0
+  m_Name: Critters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initial: {x: 0, y: 0, z: 0}
   hp: 0
+  mycolor: {fileID: 770954606057331587}
   baseAttack: 0
   baseDefense: 0
   baseSpeed: 0

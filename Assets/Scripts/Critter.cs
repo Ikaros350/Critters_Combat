@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +6,11 @@ using UnityEngine;
 public class Critter : MonoBehaviour, IPool
 {
     //criaturas
-    [SerializeField] Vector3 initial;
-    System.Random selector;
-     [SerializeField] Affinity affinityArray = new Affinity();
+        [SerializeField] Vector3 initial;
+        public static System.Random selector = new System.Random();
+        [SerializeField] Affinity affinityArray = new Affinity();
         [SerializeField] float hp;
+        [SerializeField]private SpriteRenderer mycolor;
         [SerializeField] private float baseAttack, baseDefense, baseSpeed,
             currentAtq, currentDef, currentSpd;
         private int atqCounter, defCounter, spdCounter;
@@ -30,8 +31,8 @@ public class Critter : MonoBehaviour, IPool
 
         public void Start()
         {
-        
         AwakeCritter();
+        mycolor = GetComponent<SpriteRenderer>();
         }
         public void DefineCritter(string name, int baseAttack,int baseDefense,int baseSpeed,int affinitieIndex, float hp)
         {
@@ -61,13 +62,13 @@ public class Critter : MonoBehaviour, IPool
             Affinity = newAffinities[affinitieIndex];
             
         }
-    void AwakeCritter()
+    public void AwakeCritter(/*System.Random selector*/)
     {
-        selector = new System.Random(DateTimeOffset.Now.Millisecond);
         Moveset = new List<Skill>();
-        
+       
         DefineCritter("Wun".ToString() + "-kun", selector.Next(10, 101), selector.Next(10, 101),
                                                     selector.Next(10, 51), selector.Next(0, 8), selector.Next(0, 501));
+        DefineColor();
         int numSkills = selector.Next(1, 4);
 
         for (int j = 0; j < numSkills; j++)
@@ -87,11 +88,10 @@ public class Critter : MonoBehaviour, IPool
 
         }
     }
-
-    public void DefineSkills(int numSkills, Skill newSkill)
+ 
+    public void DefineSkills(int numSkills, Skill newSkill/*, System.Random selector*/)
     {
-            selector = new System.Random(DateTimeOffset.Now.Millisecond);
-           
+  
             if (numSkills > 3)
                 numSkills = 3;
             if (numSkills <= 0)
@@ -109,7 +109,6 @@ public class Critter : MonoBehaviour, IPool
             }
             else if(Moveset.Count == 0 && newSkill is SupportSkill)
             {
-
             AttackSkill remplaceSkill = new AttackSkill("basicPunch", selector.Next(1, 11), selector.Next(0, 7));
             Debug.Log(remplaceSkill.Name);
             Moveset.Add(remplaceSkill);
@@ -118,7 +117,7 @@ public class Critter : MonoBehaviour, IPool
             
     }
 
-        public float AlterState(int state) //0-subida de ataque , 1 - subida de defensa , 2- disminucion velocidad
+    public float AlterState(int state) //0-subida de ataque , 1 - subida de defensa , 2- disminucion velocidad
         {
             
             float baseValue = 0;
@@ -170,12 +169,14 @@ public class Critter : MonoBehaviour, IPool
             return baseValue;
         }
         
-        public void OnHit(float currentAttack, int skillPower, float affinityMultiplier )
+    public void OnHit(float currentAttack, int skillPower, float affinityMultiplier )
         {
           float DamageValue = (currentAttack + skillPower) * affinityMultiplier;
 
             Hp = Hp - DamageValue;
         }
+
+    //Piscina------------------------------------------------------------------
     public void Instantiate() // momento en que se instancia en la escena
     {
         initial = transform.position;
@@ -186,6 +187,34 @@ public class Critter : MonoBehaviour, IPool
         gameObject.transform.parent = null;
         
     }
+    //Color------------------------------------
+    void DefineColor()
+    {
+        switch (affinity)
+        {
+            case "Dark":
+                mycolor.color = Color.magenta;
+                break;
 
+            case "Light":
+                mycolor.color = Color.white;
+
+                break;
+
+            case "Fire":
+                mycolor.color = Color.red;
+                break;
+
+            case "Water":
+                mycolor.color = Color.cyan;
+                break;
+            case "Wind":
+                mycolor.color = Color.green;
+                break;
+            case "Earth":
+                mycolor.color = Color.yellow;
+                break;
+        }
+    }
 }
 
