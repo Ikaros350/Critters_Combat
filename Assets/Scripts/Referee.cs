@@ -7,9 +7,9 @@ public class Referee : MonoBehaviour
     public static Referee instance;
 
     [SerializeField]private EnemyLogic enemy;
-    
+    UIManager myUImanager;
     [SerializeField]private Player player;
-    private bool turnStart;
+    [SerializeField] private bool turnStart;
     [SerializeField]private Critter currentPlayerC, currentEnemyC;
 
     Affinity affinityTable = new Affinity();
@@ -24,6 +24,7 @@ public class Referee : MonoBehaviour
     public Player Player { get => player;}
     public Critter CurrentPlayerC { get => currentPlayerC;}
     public Critter CurrentEnemyC { get => currentEnemyC; }
+    public bool TurnStart { get => turnStart; private set => turnStart = value; }
 
     [SerializeField]private Obsever[] observers;
 
@@ -32,7 +33,7 @@ public class Referee : MonoBehaviour
     private bool hasResgisteredObservers;
     private void Awake()
     {
-        turnStart = true;
+        TurnStart = true;
         if (instance != null)
         {
             Destroy(this);
@@ -40,12 +41,9 @@ public class Referee : MonoBehaviour
 
         instance = this;
         player = FindObjectOfType<Player>();
-        
-        //player = GetComponent<Player>();
-
         enemy = FindObjectOfType<EnemyLogic>();
-        
-        //enemy = GetComponent<EnemyLogic>();
+
+        myUImanager = FindObjectOfType<UIManager>();
     }
     void Start()
     {
@@ -89,9 +87,8 @@ public class Referee : MonoBehaviour
             currentPlayerC = player.Critters[0];
             currentEnemyC = enemy.Critters[0];
 
-
-            //Debug.Log("criter del jugado canntidad de skills: " + currentPlayerC.Moveset.Count);
-            //Debug.Log("criter del enemigo canntidad de skills: " + currentEnemyC.Moveset.Count);
+            myUImanager.UpdateButtons();
+           
         }
     }
 
@@ -106,24 +103,19 @@ public class Referee : MonoBehaviour
     public void Action(int skill)
     {
         float timeCounter = 0;
-         turnStart = true;
+   
 
-        if (turnStart)
+        if (TurnStart)
         {
+            TurnStart = false;
             //caso jugador mas rapido que enemigo
             if (currentPlayerC.BaseSpeed > currentEnemyC.BaseSpeed)
             {
-
                 PlayerTurn(skill);
                 timeCounter += 1f * Time.deltaTime;
 
                if(currentEnemyC.Hp>0)
                 EnemyTurn();
-               
-                turnStart = false;
-
-
-
 
             }
 
@@ -136,11 +128,8 @@ public class Referee : MonoBehaviour
                 if (currentPlayerC.Hp > 0)
                     PlayerTurn(skill);
 
-                turnStart = false;
-               
-
             }
-
+           
             //caso velocidades iguales
             if (currentPlayerC.BaseSpeed == currentEnemyC.BaseSpeed)
             {
@@ -156,7 +145,6 @@ public class Referee : MonoBehaviour
                     if (currentPlayerC.Hp > 0)
                         PlayerTurn(skill);
 
-                    turnStart = false; 
                 }
 
                 if (coin == 0)
@@ -166,12 +154,17 @@ public class Referee : MonoBehaviour
 
                     if (currentEnemyC.Hp > 0)
                         EnemyTurn();
-
-                    turnStart = false; 
                 }
             }
-        }
 
+            Invoke("StarTurn", 0.2f);
+        }
+       
+
+    }
+    void StarTurn()
+    {
+        TurnStart = true;
     }
     void ValWin()
     {
@@ -235,17 +228,17 @@ public class Referee : MonoBehaviour
     void EnemyTurn()
     {
         //Turno del enemigo
-        if (enemy.MadeAction() is AttackSkill)
+        if (currentEnemyC.Moveset[enemy.MadeAction()] is AttackSkill)
         {
-            AttackSkill placeholderSkill = enemy.MadeAction() as AttackSkill;
+            AttackSkill placeholderSkill = currentEnemyC.Moveset[enemy.MadeAction()] as AttackSkill;
             Debug.Log("Enemy affinity skill "+placeholderSkill.MyAffinity);
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
             currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
             ValWin();
         }
-        else if (enemy.MadeAction() is SupportSkill)
+        else if (currentEnemyC.Moveset[enemy.MadeAction()] is SupportSkill)
         {
-            SupportSkill placeholderSkill = enemy.MadeAction() as SupportSkill;
+            SupportSkill placeholderSkill = currentEnemyC.Moveset[enemy.MadeAction()] as SupportSkill;
             Debug.Log("Enemy supp skill" + placeholderSkill.Name);
             switch (placeholderSkill.Name)
             {

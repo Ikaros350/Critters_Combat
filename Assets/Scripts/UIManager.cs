@@ -15,20 +15,19 @@ public class UIManager : Obsever
     {
         lockPanel.SetActive(true);
     }
-    public void Unlock()
+    public void UnlockTurn()
     {
         lockPanel.SetActive(false);
     }
     private void Start()
     {
-
-        UpdateButtons();
         countEnemy = Referee.instance.Enemy.Critters.Count;
         countPlayer = Referee.instance.Player.Critters.Count;
         enemyCritters.text = countEnemy.ToString();
         playerCritters.text = countPlayer.ToString();
+        
     }
-    private void UpdateButtons()
+    public void UpdateButtons()
     {
         for (int i = 0; i < Referee.instance.CurrentPlayerC.Moveset.Count; i++)
         {
@@ -56,7 +55,7 @@ public class UIManager : Obsever
         {
             countPlayer -= 1;
             DowndateButtons();
-            UpdateButtons();
+            //UpdateButtons();
         } 
         UpdateCountCritters();
     }
@@ -77,5 +76,13 @@ public class UIManager : Obsever
     public override void UnRegister(Referee referee)
     {
         Referee.wonPLayer -= Notify;
+    }
+
+    private void Update()
+    {
+    //    if (!Referee.instance.TurnStart)
+    //        lockTurn();
+    //    else
+    //        UnlockTurn();
     }
 }
