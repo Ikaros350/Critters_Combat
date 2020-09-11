@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-    public class AttackSkill:Skill
-    {
+public class AttackSkill:Skill
+{
         Affinity affinityArray;
         string[] newAffinities;
         //tecnicas de daño
@@ -13,12 +14,15 @@ using System.Threading.Tasks;
    
         public AttackSkill(string name, int power, int affinityIndex) : base( name, power)
         {
+        /*
             if (power > 0 && power <= 10)
                 Power = power;
             else if (power <= 0)
                 Power = 1;
             else if (power > 10)
                 Power = 10;
+        */
+            Power = Mathf.Clamp(power, 1, 10);
 
             affinityArray = new Affinity();
 
@@ -34,5 +38,5 @@ using System.Threading.Tasks;
 
       
 
-    }
+}
 

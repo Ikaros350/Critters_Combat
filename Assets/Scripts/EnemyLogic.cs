@@ -11,7 +11,7 @@ public class EnemyLogic : PlayerBase
     {
         //Critters = new List<Critter>();
         PoolCritters = GameObject.FindGameObjectWithTag("Pool").GetComponent<PoolObject>();
-        EquipCritters(2);
+        EquipCritters(3);
 
     }
     
