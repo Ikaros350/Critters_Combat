@@ -23,7 +23,7 @@ public class EnemyLogic : PlayerBase
 
         if (Critters[0].Moveset.Count == 3)
         {
-           
+
             if (state == 1)
             {
                 return 0;
@@ -41,7 +41,7 @@ public class EnemyLogic : PlayerBase
             }
 
         }
-       else if (Critters[0].Moveset.Count == 2)
+        else if (Critters[0].Moveset.Count == 2)
         {
 
             if (state == 1)

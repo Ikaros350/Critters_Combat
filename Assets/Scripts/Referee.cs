@@ -11,7 +11,7 @@ public class Referee : MonoBehaviour
     [SerializeField]private Player player;
     [SerializeField] private bool turnStart;
     [SerializeField]private Critter currentPlayerC, currentEnemyC;
-
+    private string turnCondition;
     Affinity affinityTable = new Affinity();
 
     [SerializeField] int CRITTERS_ENEMY_COUNT;
@@ -25,7 +25,7 @@ public class Referee : MonoBehaviour
     public Critter CurrentPlayerC { get => currentPlayerC;}
     public Critter CurrentEnemyC { get => currentEnemyC; }
     public bool TurnStart { get => turnStart; private set => turnStart = value; }
-
+  
     [SerializeField]private Obsever[] observers;
 
     private int currentCrittersCap;
@@ -56,6 +56,9 @@ public class Referee : MonoBehaviour
             //NotifyObservers();
         }
         ChangeCritter();
+
+        myUImanager.UpdateButtons();
+       
     }
     private void RegisterObservers()
     {
@@ -86,12 +89,18 @@ public class Referee : MonoBehaviour
         {
             currentPlayerC = player.Critters[0];
             currentEnemyC = enemy.Critters[0];
+        }   
 
-            myUImanager.UpdateButtons();
-           
-        }
+   
     }
+    public bool CanChange()
+    {
+        bool canChange = false;
+        if (currentPlayerC.Moveset.Count != 0)
+            canChange = true;
 
+        return canChange;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -157,12 +166,21 @@ public class Referee : MonoBehaviour
                 }
             }
 
-            Invoke("StarTurn", 0.2f);
+            
         }
        
 
     }
-    void StarTurn()
+    public string TurnAction()
+    {
+        string turnAction = "";
+
+
+
+
+        return turnAction;
+    }
+   public void StarTurn()
     {
         TurnStart = true;
     }
@@ -181,6 +199,12 @@ public class Referee : MonoBehaviour
                     NotifyObservers();
                 }
                 ChangeCritter();
+                
+                for (int i = 0; i < currentPlayerC.Moveset.Count; i++)
+                {
+                    Debug.Log(currentPlayerC.Moveset[i].Name);
+                }
+                myUImanager.UpdateButtons();
             }
 
             if (currentEnemyC.Hp <= 0)
@@ -194,6 +218,10 @@ public class Referee : MonoBehaviour
                 ChangeCritter();
             }
         }
+        else
+        {
+
+        }
 
     }
     void PlayerTurn(int skill)
@@ -202,56 +230,100 @@ public class Referee : MonoBehaviour
         if (currentPlayerC.Moveset[skill] is AttackSkill)
         {
             AttackSkill placeholderSkill = currentPlayerC.Moveset[skill] as AttackSkill;
-            Debug.Log("jUGADOR affinity skill" + placeholderSkill.MyAffinity);
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentEnemyC.Affinity);
             currentEnemyC.OnHit(currentPlayerC.CurrentAtq, placeholderSkill.Power, multipler);
             ValWin();
+
+            turnCondition = "El Critter:  " + currentPlayerC.Name + " del jugador uso: " + currentPlayerC.Moveset[skill].Name +"\n"+" del Atributo: "+ placeholderSkill.MyAffinity;
         }
         else if (currentPlayerC.Moveset[skill] is SupportSkill)
         {
             SupportSkill placeholderSkill = currentPlayerC.Moveset[skill] as SupportSkill;
-            Debug.Log("Jugador supp skill" + placeholderSkill.Name);
-            switch (placeholderSkill.Name)
+            if (placeholderSkill != null)
             {
-                case "AtkUp":
-                    currentPlayerC.AlterState(0);
-                    break;
-                case "DefUp":
-                    currentPlayerC.AlterState(1);
-                    break;
-                case "SpdDwn":
-                    currentEnemyC.AlterState(2);
-                    break;
+
+                switch (placeholderSkill.Name)
+                {
+                    case "AtkUp":
+                        currentPlayerC.AlterState(0);
+                        break;
+                    case "DefUp":
+                        currentPlayerC.AlterState(1);
+                        break;
+                    case "SpdDwn":
+                        currentEnemyC.AlterState(2);
+                        break;
+                }
+
+                turnCondition = "El Critter:  " + currentPlayerC.Name + " del jugador uso: " + currentPlayerC.Moveset[skill].Name;
+            }
+            else
+            {
+                Debug.Log("Soy turista no se nada version player");
             }
         }
+
+        
+
+        
+        myUImanager.ConditionUpdate(turnCondition);
     }
     void EnemyTurn()
     {
+        Skill newSkill = currentEnemyC.Moveset[enemy.MadeAction()];
+
         //Turno del enemigo
-        if (currentEnemyC.Moveset[enemy.MadeAction()] is AttackSkill)
+        if (newSkill is AttackSkill)
         {
-            AttackSkill placeholderSkill = currentEnemyC.Moveset[enemy.MadeAction()] as AttackSkill;
-            Debug.Log("Enemy affinity skill " + placeholderSkill.MyAffinity);
-            float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
-            currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
-            ValWin();
-        }
-        else if (currentEnemyC.Moveset[enemy.MadeAction()] is SupportSkill)
-        {
-            SupportSkill placeholderSkill = currentEnemyC.Moveset[enemy.MadeAction()] as SupportSkill;
-            Debug.Log("Enemy supp skill" + placeholderSkill.Name);
-            switch (placeholderSkill.Name)
+
+            AttackSkill placeholderSkill = newSkill as AttackSkill;
+
+            if (placeholderSkill != null)
             {
-                case "AtkUp":
-                    currentEnemyC.AlterState(0);
-                    break;
-                case "DefUp":
-                    currentEnemyC.AlterState(1);
-                    break;
-                case "SpdDwn":
-                    currentPlayerC.AlterState(2);
-                    break;
+               
+                float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
+                currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
+                ValWin();
+
+                turnCondition = "El Critter:  " + currentEnemyC.Name + " del enemigo uso: " + newSkill.Name + "\n"+" del atributo: " + placeholderSkill.MyAffinity;
+            }
+            else
+            {
+                Debug.Log("Suerte papi");
             }
         }
+        else if (newSkill is SupportSkill)
+        {
+            SupportSkill placeholderSkill = newSkill as SupportSkill;
+            
+            if (placeholderSkill != null)
+            {
+                
+
+                switch (placeholderSkill.Name)
+                {
+                    case "AtkUp":
+                        currentEnemyC.AlterState(0);
+                        break;
+                    case "DefUp":
+                        currentEnemyC.AlterState(1);
+                        break;
+                    case "SpdDwn":
+                        currentPlayerC.AlterState(2);
+                        break;
+                }
+
+                turnCondition = "El Critter:  " + currentEnemyC.Name + " del enemigo uso: " + newSkill.Name;
+            }
+            else
+            {
+                Debug.Log("soy turista no se nada");
+            }
+        }
+
+       
+
+
+        myUImanager.ConditionUpdate(turnCondition);
     }
 }

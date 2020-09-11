@@ -30,10 +30,10 @@ public class Critter : MonoBehaviour, IPool
         public string Affinity { get => affinity; private set => affinity = value; }
         public List<Skill> Moveset { get => moveSet; private set => moveSet = value; }
 
-        public void Start()
+        public void Awake()
         {
-        AwakeCritter();
-        mycolor = GetComponent<SpriteRenderer>();
+            AwakeCritter();
+            mycolor = GetComponent<SpriteRenderer>();
         }
         public void DefineCritter(string name, int baseAttack,int baseDefense,int baseSpeed,int affinitieIndex, float hp)
         {
@@ -67,7 +67,7 @@ public class Critter : MonoBehaviour, IPool
     {
         Moveset = new List<Skill>();
        
-        DefineCritter("Wun".ToString() + "-kun", selector.Next(10, 101), selector.Next(10, 101),
+        DefineCritter(selector.Next(10,101).ToString() + "-kun", selector.Next(10, 101), selector.Next(10, 101),
                                                     selector.Next(10, 51), selector.Next(0, 8), selector.Next(0, 501));
         DefineColor();
         

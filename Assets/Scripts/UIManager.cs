@@ -2,22 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text;
 
 public class UIManager : Obsever
 {
     [SerializeField] Button[] buttons;
-    [SerializeField] Text playerCritters, enemyCritters, affinityPlayer, affinityEnemy,notification;
-    [SerializeField] GameObject lockPanel;
+    [SerializeField] Text playerCritters, enemyCritters, affinityPlayer, affinityEnemy,notification,PlayerHp,EnemyHp;
+    [SerializeField] GameObject lockPanel,win,lose;
+    StringBuilder conditionString = new StringBuilder();
     
     private int countEnemy;
     private int countPlayer;
     public void lockTurn()
     {
         lockPanel.SetActive(true);
+        lockPanel.GetComponentInChildren<Text>().text = conditionString.ToString();
+                                                        
     }
+
+    public void ConditionUpdate(string newCondition)
+    {
+        conditionString.Append(newCondition + "\n");
+        
+    }
+
     public void UnlockTurn()
     {
         lockPanel.SetActive(false);
+        conditionString.Clear();
     }
     private void Start()
     {
@@ -25,37 +37,47 @@ public class UIManager : Obsever
         countPlayer = Referee.instance.Player.Critters.Count;
         enemyCritters.text = countEnemy.ToString();
         playerCritters.text = countPlayer.ToString();
-        
+     
+
+
     }
     public void UpdateButtons()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            Debug.Log("Los botones cambiaran");
-            buttons[i].interactable = true;
-            buttons[i].GetComponentInChildren<Text>().text = Referee.instance.CurrentPlayerC.Moveset[i].Name;
-        }
+       
+            for (int i = 0; i < 3; i++)
+            {
+                
+                buttons[i].interactable = true;
+            if (Referee.instance.CurrentPlayerC.Moveset[i] is AttackSkill)
+            {
+                AttackSkill placeholder = Referee.instance.CurrentPlayerC.Moveset[i] as AttackSkill;
+                buttons[i].GetComponentInChildren<Text>().text = (placeholder.Name + "\n" + placeholder.MyAffinity).ToString(); 
+            }
+            else if(Referee.instance.CurrentPlayerC.Moveset[i] is SupportSkill)
+                buttons[i].GetComponentInChildren<Text>().text = Referee.instance.CurrentPlayerC.Moveset[i].Name.ToString();
+
+
+        } 
+           
+        
     }
-    private void DowndateButtons()
-    {
-        for (int i = 0; i < Referee.instance.CurrentPlayerC.Moveset.Count; i++)
-        {
-            Debug.Log("Los se borarran");
-            buttons[i].interactable = false;
-            buttons[i].GetComponentInChildren<Text>().text = "";
-        }
-    }
+    
     public override void Notify()
     {
         if(Referee.instance.CurrentEnemyC.Hp <= 0) 
         {
             countEnemy -= 1;
+            if (countEnemy == 0)
+                win.SetActive(true);
+           
         } 
         if(Referee.instance.CurrentPlayerC.Hp <= 0)
         {
             countPlayer -= 1;
-            DowndateButtons();
-            //UpdateButtons();
+            if (countPlayer == 0)
+                lose.SetActive(true);
+
+            
         } 
         UpdateCountCritters();
     }
@@ -65,6 +87,9 @@ public class UIManager : Obsever
         {
             enemyCritters.text = countEnemy.ToString();
             playerCritters.text = countPlayer.ToString();
+          
+
+
         }
     }
 
@@ -80,10 +105,15 @@ public class UIManager : Obsever
 
     private void Update()
     {
-        /*if (!Referee.instance.TurnStart)
+        if (!Referee.instance.TurnStart)
             lockTurn();
         else
             UnlockTurn();
-        */
+        EnemyHp.text = Referee.instance.CurrentEnemyC.Hp.ToString();
+        PlayerHp.text = Referee.instance.CurrentPlayerC.Hp.ToString();
+        affinityEnemy.text = Referee.instance.CurrentEnemyC.Affinity.ToString();
+        affinityPlayer.text = Referee.instance.CurrentPlayerC.Affinity.ToString();
+
+
     }
 }
