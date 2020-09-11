@@ -10,7 +10,8 @@ public class Critter : MonoBehaviour, IPool
         public static System.Random selector = new System.Random();
         [SerializeField] Affinity affinityArray = new Affinity();
         [SerializeField] float hp;
-        [SerializeField]private SpriteRenderer mycolor;
+        [SerializeField] private SpriteRenderer mycolor;
+        [SerializeField] private int abilities;
         [SerializeField] private float baseAttack, baseDefense, baseSpeed,
             currentAtq, currentDef, currentSpd;
         private int atqCounter, defCounter, spdCounter;
@@ -69,21 +70,20 @@ public class Critter : MonoBehaviour, IPool
         DefineCritter("Wun".ToString() + "-kun", selector.Next(10, 101), selector.Next(10, 101),
                                                     selector.Next(10, 51), selector.Next(0, 8), selector.Next(0, 501));
         DefineColor();
-        int numSkills = selector.Next(1, 4);
-
-        for (int j = 0; j < numSkills; j++)
+        
+        for (int j = 0; j < abilities; j++)
         {
             int skillCondition = selector.Next(0, 2);
             if (skillCondition == 0)
             {
 
-                AttackSkill newSkillA = new AttackSkill(j.ToString() + " power", selector.Next(0, 11), selector.Next(0, 7));
-                DefineSkills(numSkills, newSkillA);
+                AttackSkill newSkillA = new AttackSkill(" power", selector.Next(0, 11), selector.Next(0, 7));
+                DefineSkills(abilities, newSkillA);
             }
             else if (skillCondition == 1)
             {
                 SupportSkill newSkillS = new SupportSkill("x", selector.Next(0, 11), selector.Next(0, 3));
-                DefineSkills(numSkills, newSkillS);
+                DefineSkills(abilities, newSkillS);
             }
 
         }

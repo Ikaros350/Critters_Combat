@@ -16,7 +16,6 @@ using System.Threading.Tasks;
                 Name = "AtkUp"; 
           else if (indexName == 1)
                 Name = "DefUp";
-
           else if (indexName == 2)
                 Name = "SpdDwn";
           else 

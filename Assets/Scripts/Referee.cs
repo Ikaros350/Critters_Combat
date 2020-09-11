@@ -231,7 +231,7 @@ public class Referee : MonoBehaviour
         if (currentEnemyC.Moveset[enemy.MadeAction()] is AttackSkill)
         {
             AttackSkill placeholderSkill = currentEnemyC.Moveset[enemy.MadeAction()] as AttackSkill;
-            Debug.Log("Enemy affinity skill "+placeholderSkill.MyAffinity);
+            Debug.Log("Enemy affinity skill " + placeholderSkill.MyAffinity);
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
             currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
             ValWin();

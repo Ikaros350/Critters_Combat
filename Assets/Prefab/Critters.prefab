@@ -98,6 +98,7 @@ MonoBehaviour:
   initial: {x: 0, y: 0, z: 0}
   hp: 0
   mycolor: {fileID: 770954606057331587}
+  abilities: 3
   baseAttack: 0
   baseDefense: 0
   baseSpeed: 0

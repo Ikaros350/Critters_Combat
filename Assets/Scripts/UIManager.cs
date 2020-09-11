@@ -29,7 +29,7 @@ public class UIManager : Obsever
     }
     public void UpdateButtons()
     {
-        for (int i = 0; i < Referee.instance.CurrentPlayerC.Moveset.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
             Debug.Log("Los botones cambiaran");
             buttons[i].interactable = true;
@@ -80,9 +80,10 @@ public class UIManager : Obsever
 
     private void Update()
     {
-    //    if (!Referee.instance.TurnStart)
-    //        lockTurn();
-    //    else
-    //        UnlockTurn();
+        /*if (!Referee.instance.TurnStart)
+            lockTurn();
+        else
+            UnlockTurn();
+        */
     }
 }
