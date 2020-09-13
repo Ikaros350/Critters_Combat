@@ -15,6 +15,7 @@ public class Referee : MonoBehaviour
     Affinity affinityTable = new Affinity();
 
     [SerializeField] int CRITTERS_ENEMY_COUNT;
+    [SerializeField] int CRITTERS_PLAYER_COUNT;
 
     public delegate void WonPlayer();
 
@@ -48,14 +49,15 @@ public class Referee : MonoBehaviour
     void Start()
     {
         CRITTERS_ENEMY_COUNT = enemy.Critters.Count;
-        
+        CRITTERS_PLAYER_COUNT = player.Critters.Count;
         RegisterObservers();
         if (hasResgisteredObservers)
         {
             currentCrittersCap =0;
             //NotifyObservers();
         }
-        ChangeCritter();
+        currentPlayerC = player.Critters[0];
+        currentEnemyC = enemy.Critters[0];
 
         myUImanager.UpdateButtons();
        
@@ -85,13 +87,16 @@ public class Referee : MonoBehaviour
     }
     public void ChangeCritter()
     {
-        if (player.Critters.Count  >= 1 && enemy.Critters.Count >= 1)
+        if (CRITTERS_PLAYER_COUNT >= 1 && CurrentPlayerC.Hp<=0 )
         {
             currentPlayerC = player.Critters[0];
+            Debug.Log("Cambie player"); 
+        }
+        if(CRITTERS_ENEMY_COUNT >= 1 && CurrentEnemyC.Hp <= 0)
+        {
             currentEnemyC = enemy.Critters[0];
-        }   
-
-   
+            Debug.Log("Cambie enemy");
+        }
     }
     public bool CanChange()
     {
@@ -125,7 +130,7 @@ public class Referee : MonoBehaviour
 
                if(currentEnemyC.Hp>0)
                 EnemyTurn();
-
+                ValWin();
             }
 
             //caso enemigo mas rapido que un enemigo
@@ -136,7 +141,7 @@ public class Referee : MonoBehaviour
 
                 if (currentPlayerC.Hp > 0)
                     PlayerTurn(skill);
-
+                ValWin();
             }
            
             //caso velocidades iguales
@@ -153,7 +158,7 @@ public class Referee : MonoBehaviour
 
                     if (currentPlayerC.Hp > 0)
                         PlayerTurn(skill);
-
+                    ValWin();
                 }
 
                 if (coin == 0)
@@ -163,6 +168,7 @@ public class Referee : MonoBehaviour
 
                     if (currentEnemyC.Hp > 0)
                         EnemyTurn();
+                    ValWin();
                 }
             }
 
@@ -170,15 +176,6 @@ public class Referee : MonoBehaviour
         }
        
 
-    }
-    public string TurnAction()
-    {
-        string turnAction = "";
-
-
-
-
-        return turnAction;
     }
    public void StarTurn()
     {
@@ -198,7 +195,10 @@ public class Referee : MonoBehaviour
                 {
                     NotifyObservers();
                 }
-                ChangeCritter();
+                CRITTERS_PLAYER_COUNT -= 1;
+
+                if(CRITTERS_PLAYER_COUNT !=0)
+                    ChangeCritter();
                 
                 myUImanager.UpdateButtons();
             }
@@ -211,7 +211,9 @@ public class Referee : MonoBehaviour
                 {
                     NotifyObservers();
                 }
-                ChangeCritter();
+                CRITTERS_ENEMY_COUNT -= 1;
+                if(CRITTERS_ENEMY_COUNT !=0)
+                    ChangeCritter();
             }
         }
         else
@@ -228,7 +230,7 @@ public class Referee : MonoBehaviour
             AttackSkill placeholderSkill = currentPlayerC.Moveset[skill] as AttackSkill;
             float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentEnemyC.Affinity);
             currentEnemyC.OnHit(currentPlayerC.CurrentAtq, placeholderSkill.Power, multipler);
-            ValWin();
+            
 
             turnCondition = "El Critter:  " + currentPlayerC.Name + " del jugador uso: " + currentPlayerC.Moveset[skill].Name +"\n"+" del Atributo: "+ placeholderSkill.MyAffinity;
         }
@@ -257,11 +259,7 @@ public class Referee : MonoBehaviour
             {
                 Debug.Log("Soy turista no se nada version player");
             }
-        }
-
-        
-
-        
+        }  
         myUImanager.ConditionUpdate(turnCondition);
     }
     void EnemyTurn()
@@ -279,7 +277,7 @@ public class Referee : MonoBehaviour
                
                 float multipler = affinityTable.AfinityTable(placeholderSkill.MyAffinity, currentPlayerC.Affinity);
                 currentPlayerC.OnHit(currentEnemyC.CurrentAtq, placeholderSkill.Power, multipler);
-                ValWin();
+                
 
                 turnCondition = "El Critter:  " + currentEnemyC.Name + " del enemigo uso: " + newSkill.Name + "\n"+" del atributo: " + placeholderSkill.MyAffinity;
             }
@@ -316,10 +314,6 @@ public class Referee : MonoBehaviour
                 Debug.Log("soy turista no se nada");
             }
         }
-
-       
-
-
         myUImanager.ConditionUpdate(turnCondition);
     }
 }

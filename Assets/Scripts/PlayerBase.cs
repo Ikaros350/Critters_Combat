@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBase : MonoBehaviour
 {
     [SerializeField] private List<Critter> critters;
+    private int countcritters=0;
     PoolObject poolCritters;
     protected System.Random selector = new System.Random();
     public List<Critter> Critters { get => critters; private set => critters = value; }
@@ -26,6 +27,7 @@ public class PlayerBase : MonoBehaviour
         */
         numCritters = Mathf.Clamp(numCritters, 1, 3); //Limite de Critters entre 1 y 3.
 
+        countcritters = numCritters;
         //Aqui equipamos los critters presentes en la Pool
         for (int i = 0; i < numCritters; i++)
         {
@@ -49,9 +51,10 @@ public class PlayerBase : MonoBehaviour
             
             Critters[0].gameObject.SetActive(false);
             Critters.Remove(critter);
-            
-            if(Critters.Count != 0)
-                Critters[0].gameObject.SetActive(true); 
+            countcritters -= 1;
+            if(Critters.Count != 0 && Critters[0].Hp >=0 && countcritters >=1)
+                Critters[0].gameObject.SetActive(true);
+            Debug.Log("Perdi un critter");
         }
     }
     public void AddCritters(Critter critter)
