@@ -200,10 +200,6 @@ public class Referee : MonoBehaviour
                 }
                 ChangeCritter();
                 
-                for (int i = 0; i < currentPlayerC.Moveset.Count; i++)
-                {
-                    Debug.Log(currentPlayerC.Moveset[i].Name);
-                }
                 myUImanager.UpdateButtons();
             }
 
