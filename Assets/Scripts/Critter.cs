@@ -170,11 +170,16 @@ public class Critter : MonoBehaviour, IPool
         }
         
     public void OnHit(float currentAttack, int skillPower, float affinityMultiplier )
-        {
-          float DamageValue = (currentAttack + skillPower) * affinityMultiplier;
+    {
+        float DamageValue = (currentAttack + skillPower) * affinityMultiplier;
 
-            Hp = Hp - DamageValue;
+        Hp = Hp - DamageValue;
+
+        if(Hp < 0)
+        {
+            Hp = 0;
         }
+    }
 
     //Piscina------------------------------------------------------------------
     public void Instantiate() // momento en que se instancia en la escena
